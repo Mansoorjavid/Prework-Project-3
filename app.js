@@ -77,7 +77,7 @@ function jumpMoveForward(steps) {
     case "N":
       var xposition = queen.position.x - steps;
       var yposition = queen.position.y;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -92,7 +92,7 @@ function jumpMoveForward(steps) {
     case "S":
       var xposition = queen.position.x + steps;
       var yposition = queen.position.y;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -106,7 +106,7 @@ function jumpMoveForward(steps) {
     case "E":
       var xposition = queen.position.x;
       var yposition = queen.position.y + steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -120,7 +120,7 @@ function jumpMoveForward(steps) {
     case "W":
       var yposition = queen.position.x;
       var yposition = queen.position.y - steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -134,7 +134,7 @@ function jumpMoveForward(steps) {
     case "NE":
       var xposition = queen.position.x - steps;
       var yposition = queen.position.y + steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -148,7 +148,7 @@ function jumpMoveForward(steps) {
     case "NW":
       var xposition = queen.position.x - steps;
       var yposition = queen.position.y - steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -162,7 +162,7 @@ function jumpMoveForward(steps) {
     case "SE":
       var xposition = queen.position.x + steps;
       var yposition = queen.position.y + steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
@@ -176,7 +176,7 @@ function jumpMoveForward(steps) {
     case "SW":
       var xpositiion = queen.position.x + steps;
       var yposition = queen.position.y - steps;
-      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 8) {
         console.log("Queen moved out of the chessboard");
       } else {
         queen.position.x = xposition;
