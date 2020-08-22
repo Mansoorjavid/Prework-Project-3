@@ -23,8 +23,8 @@ console.log(
 );
 console.log("Default queen's direction: " + queen.direction);
 
-changeDirection("S");
-jumpMoveForward(3);
+changeDirection("SW");
+jumpMoveForward(4);
 updatePosition();
 
 console.log(
@@ -33,6 +33,8 @@ console.log(
 console.log("Current queen's direction: " + queen.direction);
 
 console.log(queen.whereabouts);
+
+errorMessage();
 
 function changeDirection(direction) {
   switch (direction) {
@@ -106,4 +108,13 @@ function jumpMoveForward(steps) {
 
 function updatePosition() {
   queen.whereabouts.push(positionLog[queen.position.x][queen.position.y]);
+}
+
+function errorMessage() {
+  if (
+    positionLog[queen.position.x][queen.position.y] === undefined ||
+    positionLog[queen.position.x][queen.position.y] < 0
+  ) {
+    console.log("you cannot move the queen out of the chessboard!");
+  }
 }
