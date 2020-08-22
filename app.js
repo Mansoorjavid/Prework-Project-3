@@ -18,56 +18,56 @@ let queen = {
   whereabouts: [],
 };
 
+console.log("Default queen's direction: " + queen.direction);
+
 console.log(
   "Default queen's position: " + positionLog[queen.position.x][queen.position.y]
 );
-console.log("Default queen's direction: " + queen.direction);
 
-changeDirection("SW");
-jumpMoveForward(4);
+changeDirection("NW");
+jumpMoveForward(2);
 updatePosition();
-
-console.log(
-  "Current queen's position: " + positionLog[queen.position.x][queen.position.y]
-);
-console.log("Current queen's direction: " + queen.direction);
-
-console.log(queen.whereabouts);
-
-errorMessage();
 
 function changeDirection(direction) {
   switch (direction) {
     case "N":
       queen.direction = "N";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "S":
       queen.direction = "S";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "E":
       queen.direction = "E";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "W":
       queen.direction = "W";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "NE":
       queen.direction = "NE";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "NW":
       queen.direction = "NW";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "SE":
       queen.direction = "SE";
+      console.log("Current queen's direction: " + queen.direction);
       break;
 
     case "SW":
       queen.direction = "SW";
+      console.log("Current queen's direction: " + queen.direction);
       break;
   }
 }
@@ -75,46 +75,122 @@ function changeDirection(direction) {
 function jumpMoveForward(steps) {
   switch (queen.direction) {
     case "N":
-      queen.position.x -= steps;
+      var xposition = queen.position.x - steps;
+      var yposition = queen.position.y;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
 
     case "S":
-      queen.position.x += steps;
+      var xposition = queen.position.x + steps;
+      var yposition = queen.position.y;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "E":
-      queen.position.y += steps;
+      var xposition = queen.position.x;
+      var yposition = queen.position.y + steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "W":
-      queen.position.y -= steps;
+      var yposition = queen.position.x;
+      var yposition = queen.position.y - steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "NE":
-      queen.position.x -= steps;
-      queen.position.y += steps;
+      var xposition = queen.position.x - steps;
+      var yposition = queen.position.y + steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "NW":
-      queen.position.x -= steps;
-      queen.position.y -= steps;
+      var xposition = queen.position.x - steps;
+      var yposition = queen.position.y - steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "SE":
-      queen.position.x += steps;
-      queen.position.y += steps;
+      var xposition = queen.position.x + steps;
+      var yposition = queen.position.y + steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
     case "SW":
-      queen.position.x += steps;
-      queen.position.y -= steps;
+      var xpositiion = queen.position.x + steps;
+      var yposition = queen.position.y - steps;
+      if (xposition < 0 || xposition > 8 || yposition < 0 || yposition > 9) {
+        console.log("Queen moved out of the chessboard");
+      } else {
+        queen.position.x = xposition;
+        queen.position.y = yposition;
+        console.log(
+          "Current queen's position: " +
+            positionLog[queen.position.x][queen.position.y]
+        );
+      }
       break;
   }
 }
 
 function updatePosition() {
   queen.whereabouts.push(positionLog[queen.position.x][queen.position.y]);
-}
-
-function errorMessage() {
-  if (
-    positionLog[queen.position.x][queen.position.y] === undefined ||
-    positionLog[queen.position.x][queen.position.y] < 0
-  ) {
-    console.log("you cannot move the queen out of the chessboard!");
-  }
+  console.log(queen.whereabouts);
 }
